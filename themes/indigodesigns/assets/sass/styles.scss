@@ -4,3 +4,20 @@
     background-color: var(--bs-light);
     border-radius: .3rem;
 }
+
+// Cover image stuff
+div.cover {
+    width: 100%;
+    background-color: $id-indigo;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    padding-top: 100%;
+}
+
+@include media-breakpoint-up(md) {
+    div.cover {
+        padding-top: 42.85714286%;
+    }
+}

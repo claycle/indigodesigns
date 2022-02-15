@@ -1,4 +1,26 @@
+{{ $cover := $.Param "cascade.cover" }}
+{{ $cover_square := $.Param "cascade.cover_square" }}
+{{ if not $cover_square }}
+    {{ $cover_square = $cover }}
+{{ end }}
+<style>
+    {{ with $cover_square }}
+        div.cover {
+            background-image: url({{ . }});
+        }
+    {{ end }}
+    {{ with $cover }}
+        // Medium devices (tablets, 768px and up)
+        @media (min-width: 768px) {
+            div.cover {
+                background-image: url({{ . }});
+            }
+        }
+    {{ end }}
+</style>
 <header>
+    <div id="cover" class="cover">
+    </div>
     <div class="jumbotron text-center">
         <h1 class="display-4">Hello, world!</h1>
         <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>

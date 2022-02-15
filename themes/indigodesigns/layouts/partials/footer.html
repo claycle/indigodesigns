@@ -1,8 +1,11 @@
 <footer class="footer fixed-bottom bg-dark">
 
     <div class="row footer-text">
-      <div class="col-12 col-md text-center text-md-left nav-link text-white">
-          Copyright &copy; My Organisation - 2020 All rights reserved.
+      <div class="col col-12 col-md text-center text-md-left nav-link text-white">
+          {{ site.Params.copyright | safeHTML }}
+      </div>
+      <div class="col col-12 col-md text-center text-md-left nav-link text-white">
+          <a href="#" data-secret="{{ site.Params.crafted_email_url | base64Encode }}">Crafted by Claycle</a>
       </div>
     </div>
 
