@@ -1,0 +1,11 @@
+{{ if .Site.Params.debug }}
+<div id="hugoinfo" class="text-small text-center text-white bg-debug">
+    Kind = "{{ .Kind }}" :
+    Layout = "{{ .Layout }}" :
+    Type = "{{ .Type }}" :
+    Section = "{{ .Section }}" :
+    BundleType = "{{ .BundleType }}" :
+    IsPage = {{ .IsPage }} :
+    IsSection = "{{ .IsSection }}"
+</div>
+{{ end }}

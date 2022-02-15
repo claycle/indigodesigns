@@ -1,10 +1,36 @@
 <footer>
-  <div class="container-fluid">
+  <div class="container-fluid mt-3 mt-md-5">
     <div class="row">
-      <div class="col col-6"></div>
-      <div class="col col-6"></div>
+      <div class="col col-12 bg-dark pb-2"></div>
+
+      <div class="col col-6 bg-primary text-light p-3">
+        <ul class="nav flex-column">
+          {{ $currentPage := . }}
+          {{ range .Site.Menus.footer.ByWeight }}
+            <li class="nav-item">
+              <a class="nav-link" href="{{ absURL .URL }}">{{ .Pre }} {{ .Name }} {{ .Post }}</a>
+            </li>
+          {{ end }}
+        </ul>
+      </div>
+
+      <div class="col col-6 bg-light text-dark text-end p-3">
+        <div>
+          <img class="d-block-end w-75" src="{{ site.Params.logo }}">
+        </div>
+        <div>
+          {{ site.Params.address.street}}
+        </div>
+        <div>
+          {{ site.Params.address.city}}, {{ site.Params.address.state}} {{ site.Params.address.zipcode}}
+        </div>
+        <div>
+          <a href="#" data-secret="{{ (printf "tel:%s" site.Params.address.phone) | base64Encode }}" data-secrettext="{{ site.Params.address.phone | base64Encode }}"></a>
+        </div>
+      </div>
     </div>
-    <div class="row bg-dark">
+
+    <div class="row bg-dark pt-1 pb-1">
       <div class="col col-12 copyright text-white text-center text-small">
         {{ site.Params.copyright | safeHTML }}
       </div>
@@ -22,4 +48,3 @@
 
 {{ $js := resources.Get "js/secret.js" | js.Build | minify }}
 <script type="text/javascript" src="{{$js.RelPermalink }}" defer></script>
-

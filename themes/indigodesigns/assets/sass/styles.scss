@@ -85,6 +85,13 @@ a:hover {
     transition: color 0.25s;
 }
 
+footer .nav-item a {
+    color: $gray-100;
+}
+
+footer .nav-item a:hover {
+    color: $gray-500;
+}
 // body {
 //     background-color: $dark;
 // }
@@ -92,3 +99,12 @@ a:hover {
 // .container {
 //     background-color: $light;
 // }
+
+.bg-debug {
+    background-color: $warning;
+}
+
+.bordered {
+    border: 4mm ridge rgba(170, 50, 220, .6);
+    border-color: $id-indigo;
+}
