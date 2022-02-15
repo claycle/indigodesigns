@@ -1,0 +1,52 @@
+BaseURL = "https://indigodesigns.com"
+languageCode = "en-us"
+title = "Indigo Designs"
+theme = "indigodesigns"
+
+relativeURLS = true
+enableEmoji = true
+enableGitInfo = true
+enableRobotsTXT = true
+
+#googleAnalytics = "UA-114931239-3"
+
+[params]
+description = "Indigo Designs - Designs That Care"
+
+[params.homepage_meta_tags]
+meta_description = "Indigo Designs - Designs That Care"
+meta_keywords = "dallas,home,house,interior,design,consulting,renovations,redesign,improvement"
+meta_og_title = "Indigo Designs"
+meta_og_type = "website"
+meta_og_url = "https://indigodesigns.com"
+meta_og_image = ""
+meta_og_description = "Indigo Designs - Designs That Care"
+meta_twitter_card = "summary_large_image"
+meta_twitter_site = "@indigodesigns"
+meta_twitter_creator = "@indigodesigns"
+
+[module]
+[[module.mounts]]
+source = "assets"
+target = "assets"
+
+[[module.mounts]]
+source = "static"
+target = "static"
+
+[[module.mounts]]
+source = "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+target = "assets/js/bootstrap.bundle.min.js"
+
+[[module.mounts]]
+source = "node_modules/bootstrap-icons/font/fonts"
+target = "static/css/fonts"
+
+[[module.mounts]]
+source = "node_modules/bootstrap-icons/bootstrap-icons.svg"
+target = "static/images/bootstrap-icons.svg"
+
+[[module.mounts]]
+source = "node_modules/bootstrap-icons/icons"
+target = "static/images/icons"
+

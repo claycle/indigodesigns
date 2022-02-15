@@ -1,0 +1,35 @@
+$font-family-sans-serif: 'Nunito Sans',
+system-ui,
+-apple-system,
+"Segoe UI",
+Roboto,
+"Helvetica Neue",
+Arial,
+"Noto Sans",
+"Liberation Sans",
+sans-serif,
+"Apple Color Emoji",
+"Segoe UI Emoji",
+"Segoe UI Symbol",
+"Noto Color Emoji" !default;
+
+//$font-family-serif: 'Libre Baskerville', serif;
+$font-family-serif: 'Cardo', serif;
+$headings-font-family: $font-family-serif;
+$headings-font-weight: 400;
+
+$astronaut: #242b66;
+$spun-pearl: #aaabbc;
+$natural-gray: #8b8982;
+$tory-blue: #0e6ba8;
+$periwinkle-gray: #c3c9e9;
+$steel-gray: #202030;
+$yellow-orange: #ffba49;
+$mojo: #bb4430;
+
+$id-indigo: $astronaut;
+$id-light-indigo: lighten($id-indigo, 20);
+$id-dark-indigo: darken($id-indigo, 20);
+
+
+$headings-color: $id-indigo;
