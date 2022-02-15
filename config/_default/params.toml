@@ -10,6 +10,6 @@ logo_icon_inverted = "/images/logo-icon-inverted.svg"
 [cascade]
     cover = "https://picsum.photos/1050/450"
     cover_square = "https://picsum.photos/450"
-    cover_content = "<img src='/images/logo.svg' style='width:100%'>"
-    cover_content_square = "<img src='/images/logo-square.svg' style='width:100%'>"
+    cover_content = "<div class='shadow-sm'><img src='/images/logo.svg' class='w-100 d-block'></div>"
+    cover_content_square = "<div class='shadow-sm'><img src='/images/logo-square.svg' class='w-100 d-block'></div>"
 

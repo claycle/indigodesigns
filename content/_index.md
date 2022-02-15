@@ -1,8 +1,25 @@
 ---
-title: Indigo Designs
+draft: false
+title: 'Indigo Designs'
+description: Description of 'Indigo Designs'
+date: 2022-02-15T13:50:40-06:00
+menu:
+  main:
+    identifier: 'home'
+    name: 'Home'
+    weight: 100
+    parent: ''
+    xclass: 'd-block d-md-none'
 cascade:
     xcover_content: "Hello!"
     xcover_content_square: "World!"
+carousel:
+    enabled: false
+    intervalms: 6000
+    images:
+        - /images/carousel/jason-wang-8J49mtYWu7E-unsplash%2021x9.png.webp
+        - /images/carousel/r-architecture-KQgrVfR3r74-unsplash%2021x9.png.webp
+        - /images/carousel/sidekix-media-0sDzRgrN_pI-unsplash%2021x9.png.webp
 ---
 
 {{< logo >}}

@@ -1,21 +1,25 @@
-<footer class="bg-dark">
-  <div class="container">
-    <div class="row footer-text">
-      <div class="col col-12 col-md text-center text-md-left nav-link text-white">
+<footer>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col col-6"></div>
+      <div class="col col-6"></div>
+    </div>
+    <div class="row bg-dark">
+      <div class="col col-12 copyright text-white text-center text-small">
         {{ site.Params.copyright | safeHTML }}
       </div>
-      <div class="col col-12 col-md text-center text-md-left nav-link text-white">
+      <div class="col col-12 crafted text-white text-center text-smallest text-spaced text-lowercase">
         <a href="#" data-secret="{{ site.Params.crafted_email_url | base64Encode }}">Crafted by Claycle</a>
       </div>
     </div>
   </div>
-
-  <!-- JavaScript and dependencies -->
-
-  {{ $bootstrap := resources.Get "js/bootstrap.bundle.min.js" }}
-  {{ $js := slice $bootstrap | resources.Concat "js/bundle.js" | resources.Minify }}
-  <script src="{{$js.RelPermalink}}" defer></script>
-
-  {{ $js := resources.Get "js/secret.js" | js.Build | minify }}
-  <script type="text/javascript" src="{{$js.RelPermalink }}" defer></script>
 </footer>
+
+<!-- JavaScript and dependencies -->
+{{ $bootstrap := resources.Get "js/bootstrap.bundle.min.js" }}
+{{ $js := slice $bootstrap | resources.Concat "js/bundle.js" | resources.Minify }}
+<script src="{{$js.RelPermalink}}" defer></script>
+
+{{ $js := resources.Get "js/secret.js" | js.Build | minify }}
+<script type="text/javascript" src="{{$js.RelPermalink }}" defer></script>
+

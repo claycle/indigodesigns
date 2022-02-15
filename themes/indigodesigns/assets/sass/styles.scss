@@ -16,12 +16,79 @@ div.cover {
     padding-top: 100%;
 }
 
+// .cover-carousel-container {
+//     height: 100vh;
+// }
+
+#cover-carousel .carousel-inner {
+     height: 100vh;
+     width: 100%;
+ }
+
+#cover-carousel .carousel-item img   {
+     height: 100vh;
+     width: 233.33%;
+     overflow: clip;
+}
+
 div.cover .cover-content {
     font-size: 4rem;
 }
 
 @include media-breakpoint-up(md) {
+    // .cover-carousel-container {
+    //     height: auto;
+    // }
     div.cover {
         padding-top: 42.85714286%;
     }
+    #cover-carousel .carousel-inner {
+         height: auto;
+    }
+    #cover-carousel .carousel-item img   {
+        height: auto;
+        width: 100%;
+    }
 }
+
+.text-small {
+    font-size: 0.8rem;
+}
+
+.text-smaller {
+    font-size: 0.6rem;
+}
+
+.text-smallest {
+    font-size: 0.4rem;
+}
+
+.text-spaced {
+    letter-spacing: 0.2rem;
+}
+
+.crafted a {
+    color: $gray-500;
+    text-decoration: none;
+}
+
+.crafted a:hover {
+    color: $gray-100;
+    text-decoration: none;
+}
+
+a {
+    transition: color 0.25s;
+}
+
+a:hover {
+    transition: color 0.25s;
+}
+
+// body {
+//     background-color: $dark;
+// }
+//
+// .container {
+//     background-color: $light;
+// }

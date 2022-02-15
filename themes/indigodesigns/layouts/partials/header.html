@@ -24,14 +24,45 @@
     {{ $cover_content_square = $cover_content }}
 {{ end }}
 <header>
+    {{/* comment */}}
+    {{ if and ($.Param "carousel") ($.Param "carousel.enabled") }}
+        {{ with $.Param "carousel" }}
+        <div class="container-fluid g-0 cover-carousel-container">
+            <div id="cover-carousel" class="carousel slide carousel-fade w-100 position-relative" data-bs-ride="carousel">
+                {{ $intervalms :=  3000 }}
+                {{ with .intervalms }}
+                    {{ $intervalms = . }}
+                {{ end }}
+                {{ $slides := 0 }}
+                <div class="carousel-inner">
+                    {{ range .images }}
+                        <div class="carousel-item
+                        {{- if eq $slides 0 }} active {{- end -}}">
+                            <img src="{{ . }}" class="d-block w-100" data-bs-interval="{{ $intervalms }}">
+                        </div>
+                        {{ $slides = add $slides 1 }}
+                    {{ end }}
+                </div>
+                <div style="z-index: 100" class="cover-content position-absolute top-50 start-50 translate-middle text-white text-center d-md-none">
+                    {{ $cover_content_square }}
+                </div>
+                <div style="z-index: 101" class="cover-content position-absolute top-50 start-50 translate-middle text-white text-center d-none d-md-block">
+                    {{ $cover_content }}
+                </div>
+            </div>
+        </div>
+        {{ end }}
+    {{ else }}
+    {{/* This is a default case - display a cover image */}}
     <div id="cover" class="cover position-relative">
-        <div id="cover-content-square" class="cover-content d-md-none position-absolute top-50 start-50 translate-middle text-white text-center">
+        <div id="cover-content-square" class="cover-content d-md-none position-absolute w-50 top-50 start-50 translate-middle text-white text-center">
             {{ $cover_content_square }}
         </div>
-        <div id="cover-content" class="cover-content d-none d-md-block position-absolute top-50 start-50 translate-middle text-white text-center">
+        <div id="cover-content" class="cover-content d-none d-md-block position-absolute w-75 top-50 start-50 translate-middle text-white text-center">
             {{ $cover_content }}
         </div>
     </div>
+    {{ end }}
 <!--
     <div class="jumbotron text-center">
         <h1 class="display-4">Hello, world!</h1>
