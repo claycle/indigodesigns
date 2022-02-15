@@ -6,6 +6,10 @@ logo_square = "/images/logo-square.svg"
 logo_icon = "/images/logo-icon.svg"
 logo_icon_inverted = "/images/logo-icon-inverted.svg"
 
+# The following can be overridden per page cascade
 [cascade]
-cover = "https://picsum.photos/1050/450"
-cover_square = "https://picsum.photos/450"
+    cover = "https://picsum.photos/1050/450"
+    cover_square = "https://picsum.photos/450"
+    cover_content = "<img src='/images/logo.svg' style='width:100%'>"
+    cover_content_square = "<img src='/images/logo-square.svg' style='width:100%'>"
+

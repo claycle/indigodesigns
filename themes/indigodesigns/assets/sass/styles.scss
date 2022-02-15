@@ -16,6 +16,10 @@ div.cover {
     padding-top: 100%;
 }
 
+div.cover .cover-content {
+    font-size: 4rem;
+}
+
 @include media-breakpoint-up(md) {
     div.cover {
         padding-top: 42.85714286%;
