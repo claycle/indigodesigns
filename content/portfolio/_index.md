@@ -1,5 +1,6 @@
 ---
 draft: false
+layout: portfolio
 title: 'Portfolio'
 description: Description of 'Portfolio'
 date: 2022-02-15T15:50:33-06:00

@@ -3,12 +3,6 @@ draft: true
 title: 'Site02'
 description: Description of 'Site02'
 date: 2022-02-17T09:36:21-06:00
-menu:
-  main:
-    identifier: 'site02'
-    name: 'Site02'
-    weight: 100
-    parent: ''
 ---
 
 # Site02

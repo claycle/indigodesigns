@@ -13,6 +13,7 @@ menu:
 cascade:
     xcover_content: "Hello!"
     xcover_content_square: "World!"
+    xcover: "featured-image.webp"
 carousel:
     enabled: false
     intervalms: 6000

@@ -108,3 +108,21 @@ footer .nav-item a:hover {
     border: 4mm ridge rgba(170, 50, 220, .6);
     border-color: $id-indigo;
 }
+
+.portfolio-item {
+    background-image: url("https://picsum.photos/1050/450");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: rgba($id-indigo, 0.6);
+    background-blend-mode: multiply;
+    transition-property: background-color;
+    transition-duration: 1s;
+}
+
+.portfolio-item:hover {
+    transition-property: background-color;
+    transition-duration: 1s;
+    background-color: rgba($id-indigo, 0);
+}
+

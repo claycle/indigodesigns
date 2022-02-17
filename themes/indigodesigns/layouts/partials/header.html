@@ -1,8 +1,16 @@
-{{ $cover := $.Param "cascade.cover" }}
-{{ $cover_square := $.Param "cascade.cover_square" }}
-{{ if not $cover_square }}
+{{ $cover := default ($.Param "cascade.cover") }}
+{{ $cover_square := default ($.Param "cascade.cover_square") | default $cover }}
+
+{{/* Is there a local file "cover.*" (and if so a "cover-square.*")? */}}
+{{ $current := . }}
+{{ with .Resources.GetMatch "cover.{webp,jpg,png}" }}
+    {{ $cover = .RelPermalink }}
     {{ $cover_square = $cover }}
+    {{ with $current.Resources.GetMatch "cover-square.{webp,jpg,png" }}
+        {{ $cover_square = .RelPermalink }}
+    {{ end }}
 {{ end }}
+
 <style>
     {{ with $cover_square }}
         div.cover {
