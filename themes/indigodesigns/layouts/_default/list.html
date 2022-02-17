@@ -1,0 +1,16 @@
+{{ define "main" }}
+
+<div class="container">
+    <div class="row">
+        {{ $current := . }}
+        {{ range .Pages }}
+            <div class="col">
+                <a class="text-decoration-none" href="{{ .RelPermalink }}">
+                    <h2 class="h4 ">{{ .Title }}</h2>
+                    Hello.
+                </a>
+            </div>
+        {{ end }}
+    </div>
+</div>
+{{ end }}

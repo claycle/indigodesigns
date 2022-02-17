@@ -50,3 +50,9 @@ target = "static/images/bootstrap-icons.svg"
 source = "node_modules/bootstrap-icons/icons"
 target = "static/images/icons"
 
+[frontmatter]
+date = ["date", "publishDate", "lastmod"]
+lastmod = ["lastmod", ":fileModTime", ":default"]
+
+sectionPagesMenu = "main"
+
