@@ -5,6 +5,13 @@
     border-radius: .3rem;
 }
 
+// navbar stuff
+#thenavbar {
+    border-bottom: 1px solid $id-indigo;
+    //box-shadow: 0px 4px 4px rgba($id-indigo, 0.5);
+    filter: drop-shadow(0px 2px 4px $id-indigo);
+}
+
 // Cover image stuff
 div.cover {
     width: 100%;
@@ -13,41 +20,26 @@ div.cover {
     background-position: center center;
     background-repeat: no-repeat;
     overflow: hidden;
-    padding-top: 100%;
+    padding-bottom: 100%;
 }
 
-// .cover-carousel-container {
-//     height: 100vh;
-// }
-
-#cover-carousel .carousel-inner {
-     height: 100vh;
-     width: 100%;
- }
-
-#cover-carousel .carousel-item img   {
-     height: 100vh;
-     width: 233.33%;
-     overflow: clip;
+div.cover.heroic {
+    height: 100vh;
+    padding-bottom: unset;
 }
+
+div.cover.thin {
+    padding-bottom: 28.125%;    // 32x9
+}
+
 
 div.cover .cover-content {
-    font-size: 4rem;
+    //font-size: 4rem;
 }
 
 @include media-breakpoint-up(md) {
-    // .cover-carousel-container {
-    //     height: auto;
-    // }
     div.cover {
-        padding-top: 42.85714286%;
-    }
-    #cover-carousel .carousel-inner {
-         height: auto;
-    }
-    #cover-carousel .carousel-item img   {
-        height: auto;
-        width: 100%;
+        padding-bottom: 42.85714286%;   // 21x9
     }
 }
 
@@ -64,7 +56,19 @@ div.cover .cover-content {
 }
 
 .text-spaced {
-    letter-spacing: 0.2rem;
+    letter-spacing: 0.5em;
+}
+
+.text-spaced-more {
+    letter-spacing: 1em;
+}
+
+.text-shadow {
+    text-shadow: 0.2rem 0.2rem 0.4rem $id-dark-indigo;
+}
+
+.text-resize {
+    font-size: 4vw;
 }
 
 .crafted a {

@@ -3,6 +3,8 @@ draft: true
 title: 'Site02'
 description: Description of 'Site02'
 date: 2022-02-17T09:36:21-06:00
+summary: >
+  Summary of the project **Site02** for display on the portfolio list.
 ---
 
 # Site02

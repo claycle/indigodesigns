@@ -10,6 +10,9 @@ menu:
     name: 'About Us'
     weight: 200
     parent: ''
+cascade:
+  cover:
+    thin: false
 ---
 
 # About Indigo Designs

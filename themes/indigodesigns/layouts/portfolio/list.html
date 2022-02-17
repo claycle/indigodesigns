@@ -1,10 +1,10 @@
 {{ define "main" }}
 <!-- PLIST -->
-<div class="container">
+<div class="container mt-3 mt-md-5">
     <div class="row">
         {{ $current := . }}
         {{ $count := 0 }}
-        {{ range .Pages }}
+        {{ range .Pages.ByDate.Reverse }}
             <div class="col">
                 {{ with .Resources.GetMatch "cover.{webp,jpg,png}" }}
                     <style>
@@ -13,16 +13,25 @@
                         }
                     </style>
                 {{ end }}
-                <div id="portfolio{{ $count }}" class="portfolio-item ratio ratio-21x9 position-relative">
-                    <div class="position-absolute top-50 start-50 translate-middle">
-                        <a class="text-decoration-none" href="{{ .RelPermalink }}">
-                            <h2 class="h4 ">{{ .Title }}</h2>
-                            Hello.
-                        </a>
+                <a class="text-decoration-none" href="{{ .RelPermalink }}">
+                    <div id="portfolio{{ $count }}" class="portfolio-item ratio ratio-21x9 position-relative">
+                        <div class="position-absolute top-50 start-50 translate-middle">
+                        </div>
                     </div>
+                </a>
+                <div class="mt-1">
+                    <a class="text-decoration-none" href="{{ .RelPermalink }}">
+                        <h2 class="h4 ">{{ .Title }}</h2>
+                    </a>
+                    {{ .Summary }}
                 </div>
             </div>
             {{ $count = add $count 1 }}
+        {{ end }}
+
+        {{/* This is just to warn the creator. */}}
+        {{ if eq $count 0 }}
+            <div class="alert alert-warning">You need to add some content.</div>
         {{ end }}
     </div>
 </div>

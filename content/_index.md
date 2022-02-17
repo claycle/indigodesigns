@@ -11,16 +11,8 @@ menu:
     parent: ''
     xclass: 'd-block d-md-none'
 cascade:
-    xcover_content: "Hello!"
-    xcover_content_square: "World!"
-    xcover: "featured-image.webp"
-carousel:
-    enabled: false
-    intervalms: 6000
-    images:
-        - /images/carousel/jason-wang-8J49mtYWu7E-unsplash%2021x9.png.webp
-        - /images/carousel/r-architecture-KQgrVfR3r74-unsplash%2021x9.png.webp
-        - /images/carousel/sidekix-media-0sDzRgrN_pI-unsplash%2021x9.png.webp
+  cover:
+    heroic: true
 ---
 
 {{< logo >}}

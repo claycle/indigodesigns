@@ -5,8 +5,16 @@
 
 <body>
 
-    {{ partial "navbar.html" . }}
+
+    {{ if not ($.Param "cascade.cover.heroic") }}
+        {{ partial "navbar.html" . }}
+    {{ end }}
+
     {{ partial "header.html" . }}
+
+    {{ if $.Param "cascade.cover.heroic" }}
+        {{ partial "navbar.html" . }}
+    {{ end }}
 
     <main>
         <div id="content">

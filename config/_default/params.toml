@@ -16,9 +16,14 @@ zipcode = "12345"
 phone = "555-555-5555"
 
 # The following can be overridden per page cascade
-[cascade]
-    cover = "https://picsum.photos/1050/450"
-    cover_square = "https://picsum.photos/450"
-    cover_content = "<div class='shadow-sm'><img src='/images/logo.svg' class='w-100 d-block'></div>"
-    cover_content_square = "<div class='shadow-sm'><img src='/images/logo-square.svg' class='w-100 d-block'></div>"
+[cascade.cover]
+url = "https://picsum.photos/1050/450"
+url1x1 = "https://picsum.photos/450"
+content = """
+<div class='d-none d-md-block w-100'><img src='/images/logo.svg' class='w-75'></div>
+<div class='d-block d-md-none w-100'><img src='/images/logo-square.svg'  class='w-50'></div>
+"""
+heroic = false
+thin = false
+hidden = false
 

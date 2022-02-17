@@ -10,4 +10,15 @@ menu:
     name: 'Portfolio'
     weight: 400
     parent: ''
+cascade:
+  cover:
+    thin: false
+    content: >
+        <div class="row align-items-center">
+          <div class="col text-end">
+            <img class="w-50" src="/images/logo-icon.svg">
+          </div>
+            <div class="col text-shadow text-spaced text-uppercase text-light text-start text-resize">Portfolio
+          </div>
+        </div>
 ---
