@@ -1,19 +1,19 @@
 {{ $cover := default ($.Param "cascade.cover.url") }}
-{{ $cover_square := default ($.Param "cascade.cover.url1x1") | default $cover }}
+{{ $cover1x1 := default ($.Param "cascade.cover.url1x1") | default $cover }}
 
-{{/* Is there a local file "cover.*" (and if so a "cover-square.*")? */}}
+{{/* Is there a local file "cover.*" (and if so a "cover-1x1.*")? */}}
 {{ $current := . }}
 {{ with .Resources.GetMatch "cover.{webp,jpg,png}" }}
     {{ $cover = .RelPermalink }}
-    {{ $cover_square = $cover }}
-    {{ with $current.Resources.GetMatch "cover-square.{webp,jpg,png" }}
-        {{ $cover_square = .RelPermalink }}
+    {{ $cover1x1 = $cover }}
+    {{ with $current.Resources.GetMatch "cover-1x1.{webp,jpg,png" }}
+        {{ $cover1x1 = .RelPermalink }}
     {{ end }}
 {{ end }}
 
 
 <style>
-    {{ with $cover_square }}
+    {{ with $cover1x1 }}
         div.cover {
             background-image: url({{ . }});
         }

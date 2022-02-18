@@ -1,8 +1,8 @@
 <footer>
   <div class="container-fluid mt-3 mt-md-5">
     <div class="row">
-      <div class="col col-12 bg-dark pb-2"></div>
-
+      {{/* The following col div should match the same in divider.html partial */}}
+      <div class="{{ $.Param "snippets.dividerclasses" }}"></div>
       <div class="col col-6 bg-primary text-light p-3">
         <ul class="nav flex-column">
           {{ $currentPage := . }}

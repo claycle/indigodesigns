@@ -9,6 +9,17 @@ menu:
     name: 'Services'
     weight: 300
     parent: ''
+cascade:
+  cover:
+    thin: true
+    content: >
+        <div class="row align-items-center">
+          <div class="col text-center">
+            <img class="w-50" src="/images/logo-icon.svg">
+          </div>
+            <div class="col text-shadow text-spaced text-uppercase text-light text-start text-resize">Services
+          </div>
+        </div>
 ---
 
 # Services

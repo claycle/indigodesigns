@@ -15,6 +15,9 @@ state = "TX"
 zipcode = "12345"
 phone = "555-555-5555"
 
+[snippets]
+dividerclasses = "col col-12 bg-dark pb-2"  # for example, <div class="{{ $.Param "snippets.dividerclasses" }}"></div>
+
 # The following can be overridden per page cascade
 [cascade.cover]
 url = "https://picsum.photos/1050/450"
