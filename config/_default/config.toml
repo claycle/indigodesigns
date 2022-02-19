@@ -6,24 +6,14 @@ theme = "indigodesigns"
 relativeURLS = true
 enableEmoji = true
 enableGitInfo = true
-enableRobotsTXT = true
+
+sectionPagesMenu = "main"
 
 #googleAnalytics = "UA-114931239-3"
 
-[params]
-description = "Indigo Designs - Designs That Care"
-
-[params.homepage_meta_tags]
-meta_description = "Indigo Designs - Designs That Care"
-meta_keywords = "dallas,home,house,interior,design,consulting,renovations,redesign,improvement"
-meta_og_title = "Indigo Designs"
-meta_og_type = "website"
-meta_og_url = "https://indigodesigns.com"
-meta_og_image = ""
-meta_og_description = "Indigo Designs - Designs That Care"
-meta_twitter_card = "summary_large_image"
-meta_twitter_site = "@indigodesigns"
-meta_twitter_creator = "@indigodesigns"
+[frontmatter]
+date = ["date", "publishDate", "lastmod"]
+lastmod = ["lastmod", ":fileModTime", ":default"]
 
 [module]
 [[module.mounts]]
@@ -50,9 +40,6 @@ target = "static/images/bootstrap-icons.svg"
 source = "node_modules/bootstrap-icons/icons"
 target = "static/images/icons"
 
-[frontmatter]
-date = ["date", "publishDate", "lastmod"]
-lastmod = ["lastmod", ":fileModTime", ":default"]
 
-sectionPagesMenu = "main"
+
 

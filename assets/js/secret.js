@@ -1,8 +1,5 @@
 window.addEventListener('load', (event) => {
     console.log('secret.js Copyright (c) 2022 claycle.com');
-});
-
-window.addEventListener('load', (event) => {
     let elements = document.querySelectorAll("[data-secret]");
     elements.forEach(el => {
         el.href = atob(el.dataset.secret);

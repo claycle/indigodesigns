@@ -51,3 +51,6 @@
 
 {{ $js := resources.Get "js/secret.js" | js.Build | minify }}
 <script type="text/javascript" src="{{$js.RelPermalink }}" defer></script>
+
+{{ $js := resources.Get "js/bna.js" | js.Build | minify }}
+<script type="text/javascript" src="{{$js.RelPermalink }}" defer></script>
