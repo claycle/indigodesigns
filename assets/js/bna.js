@@ -16,12 +16,12 @@ function _beforeAndAfter(slider, evt) {
     }
 }
 
-window.addEventListener('load', (event) => {
-    console.log('bna.js Copyright (c) 2022 claycle.com');
+window.addEventListener('load', (evt) => {
+    console.info('bna.js Copyright (c) 2022 claycle.com');
     // Locate all bna via ...
     let basliders = document.querySelectorAll("input.baslider");
     basliders.forEach((slider) => {
-        //console.log(slider);
+        //console.debug(slider);
         slider.addEventListener('input', (e) => {
             _beforeAndAfter(slider, e);
         });
@@ -31,8 +31,4 @@ window.addEventListener('load', (event) => {
     });
 });
 
-// Code By Webdevtrick ( https://webdevtrick.com )
-function beforeAfter() {
-  //document.getElementById('compare').style.width = document.getElementById('slider').value + "%";
-}
 

@@ -7,6 +7,7 @@
         </div>
     </div>
 
+    {{ $count := 0 }}
     {{ $current := . }}
     {{ with .Resources.GetMatch "before-after.{md,html}" }}
     <div class="row">
@@ -15,23 +16,51 @@
             {{ $before := $current.Resources.GetMatch "before.{webp,jpg,png}" }}
             {{ $after := $current.Resources.GetMatch "after.{webp,jpg,png}" }}
             <style>
-                #before01 {
+                #before{{ $count }} {
                     background-image: url({{$before.RelPermalink}});
                 }
-                #after01 {
+                #after{{ $count }}{
                     background-image: url({{$after.RelPermalink}})
                 }
             </style>
 
             <div class="bacontainer">
-                <figure id="after01">
-                    <div id="before01" class="bacompare"></div>
+                <figure id="after{{ $count }}">
+                    <div id="before{{ $count }}" class="bacompare"></div>
                 </figure>
-                <input id="slider01" type="range" min="0" max="100" value="50" class="baslider" data-target="before01" />
+                <input id="slider{{ $count }}" type="range" min="0" max="100" value="50" class="baslider" data-target="before{{ $count }}" />
             </div>
         </div>
     </div>
     {{ end }}
+    <hr>
+    {{ $count = add $count 1 }}
+
+    {{ with .Resources.GetMatch "before-after.{md,html}" }}
+    <div class="row">
+        <div class="col">
+
+            {{ $before := $current.Resources.GetMatch "before.{webp,jpg,png}" }}
+            {{ $after := $current.Resources.GetMatch "after.{webp,jpg,png}" }}
+            <style>
+                #before{{ $count }} {
+                    background-image: url({{$before.RelPermalink}});
+                }
+                #after{{ $count }}{
+                    background-image: url({{$after.RelPermalink}})
+                }
+            </style>
+
+            <div class="bacontainer">
+                <figure id="after{{ $count }}">
+                    <div id="before{{ $count }}" class="bacompare"></div>
+                </figure>
+                <input id="slider{{ $count }}" type="range" min="0" max="100" value="50" class="baslider" data-target="before{{ $count }}" />
+            </div>
+        </div>
+    </div>
+    {{ end }}
+
 </div>
 
 {{ end }}

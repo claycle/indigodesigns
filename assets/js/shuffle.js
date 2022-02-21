@@ -1,5 +1,5 @@
 window.addEventListener('load', (event) => {
-    console.log('shuffle.js Copyright (c) 2022 claycle.com');
+    console.info('shuffle.js Copyright (c) 2022 claycle.com');
     var startProductBarPos = -1;
     // Locate all the data-shuffle images
     let elements = document.querySelectorAll("[data-shuffle]");
