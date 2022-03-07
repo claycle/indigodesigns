@@ -30,3 +30,11 @@ weight = 300
 parent = ""
 pre = '<i class="bi bi-images"></i>'
 url = "/portfolio"
+
+[[footer]]
+identifier = "contact"
+name = "Contact Us"
+weight = 400
+parent = ""
+pre = '<i class="bi bi-telephone-forward"></i>'
+url = "/portfolio"

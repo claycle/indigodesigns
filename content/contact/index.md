@@ -2,13 +2,24 @@
 draft: false
 title: 'Contact Us'
 description: Description of 'Contact'
-date: 2022-02-18T10:00:34-06:00
-xmenu:
+date: 2022-02-15T15:50:33-06:00
+menu:
   main:
     identifier: 'contact'
-    name: 'Contact Us'
-    weight: 900
+    name: 'Contact'
+    weight: 500
     parent: ''
+cascade:
+  cover:
+    thin: true
+    content: >
+        <div class="row align-items-center">
+          <div class="col text-center">
+            <img class="w-50" src="/images/logo-icon.svg">
+          </div>
+            <div class="col text-shadow text-spaced text-uppercase text-light text-start text-resize text-nowrap">Contact Us
+          </div>
+        </div>
 ---
 
 # Contact

@@ -7,7 +7,7 @@ relativeURLS = true
 enableEmoji = true
 enableGitInfo = true
 
-sectionPagesMenu = "main"
+#sectionPagesMenu = "main"
 
 #googleAnalytics = "UA-114931239-3"
 

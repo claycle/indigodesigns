@@ -17,7 +17,7 @@ cascade:
           <div class="col text-center">
             <img class="w-50" src="/images/logo-icon.svg">
           </div>
-            <div class="col text-shadow text-spaced text-uppercase text-light text-start text-resize">Services
+            <div class="col text-shadow text-spaced text-uppercase text-light text-start text-resize text-nowrap">Services
           </div>
         </div>
 ---
