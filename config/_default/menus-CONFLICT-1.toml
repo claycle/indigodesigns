@@ -1,0 +1,32 @@
+[[footer]]
+identifier = "home"
+name = "Home"
+weight = 900
+parent = ''
+pre = '<i class="bi bi-house"></i>'
+url = "/"
+
+
+[[footer]]
+identifier = "about"
+name = "About Indigo Designs"
+weight = 100
+parent = ""
+pre = '<i class="bi bi-info-square"></i>'
+url = "/about"
+
+[[footer]]
+identifier = "services"
+name = "Our Services"
+weight = 200
+parent = ""
+pre = '<i class="bi bi-hammer"></i>'
+url = "/services"
+
+[[footer]]
+identifier = "portfolio"
+name = "Our Portfolio"
+weight = 300
+parent = ""
+pre = '<i class="bi bi-images"></i>'
+url = "/portfolio"
